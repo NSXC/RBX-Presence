@@ -22,7 +22,7 @@ namespace SpotifyNowPlaying
             var listener = new HttpListener();
             listener.Prefixes.Add("http://localhost:5000/");
             listener.Start();
-            Console.WriteLine("Please visit the following URL to authorize the application:");
+            Console.WriteLine("Please visit the following URL to authorize the application: ");
             Console.WriteLine($"{authorizeUrl}?client_id={clientId}&response_type=code&redirect_uri={redirectUri}&scope=user-read-currently-playing");
             Console.WriteLine("Waiting for authorization...");
             var context = await listener.GetContextAsync();
